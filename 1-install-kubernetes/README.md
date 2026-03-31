@@ -32,7 +32,7 @@ It is optimized for:
 
 - Instance Type: `t3.micro`
 - RAM: 1GB
-- CPU: 1 vCPU
+- CPU: 2 vCPU
 - Storage: **20 GB (gp3)**
 - OS: Ubuntu 22.04
 
@@ -52,17 +52,18 @@ Allow:
 
 # ⚙️ MASTER SETUP
 
-## Step 1: Copy script to master
+## Step 1: Clone the git repo
 
-Upload or paste the script:
-k8s-master-clean.sh
+git clone https://github.com/theshubhamgour/kubernetes-tutorial
+cd kubernetes-tutorial
+cd 1-install-kubernetes
 
 ---
 
 ## Step 2: Run script
 
 chmod +x k8s-master-clean.sh
-./k8s-master-clean.sh
+./master-node-setup.sh
 
 ---
 
@@ -90,14 +91,16 @@ kubeadm join <MASTER-IP>:6443 --token ... --discovery-token-ca-cert-hash sha256:
 
 ## Step 1: Copy script to worker
 
-k8s-worker-clean.sh
+git clone https://github.com/theshubhamgour/kubernetes-tutorial
+cd kubernetes-tutorial
+cd 1-install-kubernetes
 
 ---
 
 ## Step 2: Run script
 
-chmod +x k8s-worker-clean.sh
-./k8s-worker-clean.sh
+chmod +x *.sh
+./worker-node-setup.sh
 
 ---
 
@@ -164,9 +167,3 @@ Shows all pods
 - Fully working Kubernetes cluster
 
 ---
-
-# 🚀 NEXT STEPS
-
-- Deploy apps
-- Use Helm
-- Set up CI/CD
