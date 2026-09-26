@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: dynamic-pvc
+spec:
+ accessModes:
+  - ReadWriteOnce
+ storageClassName: demo-storage
+ resources:
+  requests:
+   storage: 1Gi
