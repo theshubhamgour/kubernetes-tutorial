@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: immutable-config
+data:
+ APP_ENV: production
+immutable: true

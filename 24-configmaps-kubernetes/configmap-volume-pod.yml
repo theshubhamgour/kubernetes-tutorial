@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: configmap-volume-pod
+spec:
+ containers:
+  - name: app-volume
+    image: busybox
+    command:
+     - sh
+     - -c
+     - sleep 3600
+    volumeMounts:
+     - name: config-volume
+       mountPath: /env/myapp
+    
+ volumes:
+   - name: config-volume
+     configMap:
+      name: app-file-config
