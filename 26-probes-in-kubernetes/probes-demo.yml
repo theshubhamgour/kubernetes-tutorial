@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: probes-demo
+  labels:
+    app: probes-demo
+
+spec:
+  containers:
+    - name: app
+      image: busybox
+
+      command:
+        - sh
+        - -c
+        - |
+          mkdir -p /www
+          rm -f /www/startup
+          rm -f /www/ready
+
+          echo "OK" > /www/healthz
+
+          busybox httpd -f -p 8080 -h /www &
+
+          sleep 10
+          echo "Startup" > /www/startup
+
+          sleep 10
+          echo "Ready" > /www/ready
+
+          sleep 30
+          rm -f /www/healthz
+
+          wait
+
+      ports:
+        - containerPort: 8080
+
+      startupProbe:
+        httpGet:
+          path: /startup
+          port: 8080
+        failureThreshold: 15
+        periodSeconds: 2
+
+      readinessProbe:
+        httpGet:
+          path: /ready
+          port: 8080
+        failureThreshold: 1
+        periodSeconds: 2
+
+      livenessProbe:
+        httpGet:
+          path: /healthz
+          port: 8080
+        failureThreshold: 3
+        periodSeconds: 2
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: probes-service
+
+spec:
+  selector:
+    app: probes-demo
+
+  ports:
+    - port: 8080
+      targetPort: 8080
