@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: vpa-demo
+spec:
+ replicas: 2
+ selector:
+  matchLabels:
+   app: vpa-demo
+ template:
+  metadata:
+   labels:
+    app: vpa-demo
+  spec:
+   securityContext:
+    runAsNonRoot: true
+    runAsUser: 65534
+   containers:
+    - name: app
+      image: registry.k8s.io/ubuntu-slim:0.14
+      resources:
+       requests:
+        cpu: 100m
+        memory: 50Mi
+      command:
+       - /bin/sh
+      args:
+       - "-c"
+       - "while true; do timeout 0.5s yes >/dev/null; sleep 0.5s; done"
