@@ -111,7 +111,7 @@ This taint prevents new Pods that do not tolerate it from being scheduled on thi
 
 ## 7. Schedule a Deployment Without a Toleration
 
-Create a file named `nginx-deployment.yaml`:
+The directory includes this Deployment manifest as [`nginx-deployment.yml`](./nginx-deployment.yml):
 
 ```yaml
 apiVersion: apps/v1
@@ -138,7 +138,7 @@ spec:
 The Pod template has no toleration for `dedicated=demo:NoSchedule`. Apply the Deployment and inspect where its Pods run:
 
 ```bash
-kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-deployment.yml
 kubectl rollout status deployment/nginx-demo
 kubectl get pods -o wide
 ```
@@ -147,13 +147,13 @@ Check the `NODE` column. The Deployment's Pods should be scheduled on eligible, 
 
 ## 8. Allow a Pod to Run on the Tainted Node
 
-Create a file named `nginx-toleration.yaml`. If the third node has a different name, update the `nodeSelector` value to match that node:
+The directory includes this Pod manifest as [`toleration-pod.yml`](./toleration-pod.yml). If the third node has a different name, update its `nodeSelector` value to match that node:
 
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-toleration
+  name: nginx-toleration-pod
 spec:
   nodeSelector:
     kubernetes.io/hostname: taints-demo-m03
@@ -174,9 +174,9 @@ The `Equal` operator requires the taint's key and value to match; the effect als
 Apply the Pod and verify its status and placement:
 
 ```bash
-kubectl apply -f nginx-toleration.yaml
-kubectl get pod nginx-toleration -o wide
-kubectl describe pod nginx-toleration
+kubectl apply -f toleration-pod.yml
+kubectl get pod nginx-toleration-pod -o wide
+kubectl describe pod nginx-toleration-pod
 ```
 
 When the Pod reaches `Running`, the `NODE` column should show the selected third node. If it does not, check the Pod's `Events`, confirm the node name and its `kubernetes.io/hostname` label, and make sure the node has enough available resources.
@@ -199,7 +199,7 @@ Remove the demo resources and taint when finished. Replace the node name if your
 
 ```bash
 kubectl delete deployment nginx-demo
-kubectl delete pod nginx-toleration
+kubectl delete pod nginx-toleration-pod
 kubectl taint nodes taints-demo-m03 dedicated=demo:NoSchedule-
 ```
 
