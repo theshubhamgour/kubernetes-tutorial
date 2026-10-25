@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: database
+ namespace: network-policy-demo
+ labels:
+  app: database
+spec:
+ containers:
+  - name: database-server
+    image: python:3.12-alpine
+    command:
+        - python
+        - -u
+        - -c
+    args:
+        - |
+          import socket
+
+          server = socket.socket()
+          server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+          server.bind(("0.0.0.0", 5432))
+          server.listen()
+
+          print("Demo TCP server listening on port 5432", flush=True)
+
+          while True:
+              connection, address = server.accept()
+              connection.sendall(b"Database TCP connection successful!\n")
+              connection.close()
+    ports:
+        - containerPort: 5432
+          protocol: TCP

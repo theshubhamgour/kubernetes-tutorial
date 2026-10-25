@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+ name: client-egress-policy
+ namespace: network-policy-demo
+spec:
+ podSelector:
+  matchLabels:
+   app: client
+ policyTypes:
+  - Egress
+ egress:
+  - to:
+    - podSelector:
+       matchLabels:
+        app: database
+    ports:
+      - protocol: TCP
+        port: 5432
