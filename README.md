@@ -2,7 +2,7 @@
 
 # ☸️ Kubernetes Tutorial for Beginners
 
-**A complete, free, hands-on Kubernetes course: 36 modules and 29+ hours of video**
+**A complete, free, hands-on Kubernetes course: 36 modules, 40 videos and 30 hours of content**
 
 [![Status: Complete](https://img.shields.io/badge/Status-Complete-2EA043?style=flat-square)](#-course-modules)
 [![Modules: 36](https://img.shields.io/badge/Modules-36-326CE5?style=flat-square&logo=kubernetes&logoColor=white)](#-course-modules)
