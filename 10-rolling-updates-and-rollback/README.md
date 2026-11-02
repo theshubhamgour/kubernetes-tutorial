@@ -163,7 +163,30 @@ Happy Learning!
 **Shubham Gour Tech**
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Tuning a rollout:** `maxSurge` sets how many extra Pods can exist during an update, and `maxUnavailable` sets how many can be down. Both default to 25%.
+- **Readable history:** set the `kubernetes.io/change-cause` annotation on a Deployment and its text appears in `kubectl rollout history`.
+- **Stuck rollouts:** `progressDeadlineSeconds` (600 by default) marks a rollout as failed if it makes no progress. It doesn't roll back automatically.
+- **What a rollback doesn't undo:** only the Pod template is rolled back. Changes to ConfigMaps, Secrets and database schemas stay as they are.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Rolling back a Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)
+- [Rolling update strategy](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment)
+- [Performing a rolling update (tutorial)](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

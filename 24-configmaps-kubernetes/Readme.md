@@ -476,3 +476,29 @@ kubectl edit configmap app-config
 ## 18. Final Note
 
 ConfigMap is one of the most important resource types in Kubernetes because it keeps configuration separate from application code. This makes deployments more flexible, portable, and easier to manage across different environments.
+
+---
+
+## 📝 Additional notes
+
+- **Applying changes:** environment variables are set when a container starts, so they don't update. After changing a ConfigMap used this way, run `kubectl rollout restart deployment/<name>`.
+- **`subPath` mounts don't update either:** a ConfigMap mounted with `subPath` won't receive changes.
+- **Optional references:** a Pod won't start if a ConfigMap it needs is missing, unless the reference sets `optional: true`. The ConfigMap must also be in the Pod's namespace.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
+- [Configure a Pod to use a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
+- [Updating configuration via a ConfigMap](https://kubernetes.io/docs/tutorials/configuration/updating-configuration-via-a-configmap/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

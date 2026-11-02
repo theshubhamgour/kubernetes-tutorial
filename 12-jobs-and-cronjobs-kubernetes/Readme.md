@@ -622,3 +622,29 @@ backoffLimit = how many failures are tolerated before giving up
 > DaemonSet asks: do I have the required Pod on every eligible node?
 > Job asks: did my work successfully finish?
 > CronJob asks: is it time to create the next Job?
+
+---
+
+## 📝 Additional notes
+
+- **Missed schedules:** `startingDeadlineSeconds` limits how late a CronJob run may start. If the deadline passes, that run is skipped and counted as missed.
+- **Smarter failure handling:** a Job's `podFailurePolicy` can fail immediately on specific exit codes, so it doesn't waste retries on errors that retrying won't fix.
+- **Make jobs safe to re-run:** a CronJob can occasionally create more than one Job for a schedule, or none at all, so write your job so running it twice causes no harm.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+- [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+- [Handling retriable and non-retriable Pod failures](https://kubernetes.io/docs/tasks/job/pod-failure-policy/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

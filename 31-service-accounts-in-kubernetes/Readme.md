@@ -244,3 +244,28 @@ Use the narrowest permissions and scope that meet the workload's needs. A Servic
 - Use RBAC Roles and bindings to grant only the required permissions within the intended namespace.
 - Set `spec.serviceAccountName` to assign a custom ServiceAccount to a Pod.
 - Use `kubectl auth can-i` to check authorization, remembering that the caller must be allowed to impersonate the ServiceAccount.
+
+---
+
+## 📝 Additional notes
+
+- **Tokens are short-lived:** modern clusters mount a time-limited token that the kubelet renews automatically, rather than a permanent Secret.
+- **Pulling private images:** add `imagePullSecrets` to a ServiceAccount, and every Pod using it can pull from that registry.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Service accounts](https://kubernetes.io/docs/concepts/security/service-accounts/)
+- [Configure service accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+- [Managing service accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

@@ -158,7 +158,28 @@ kubectl port-forward svc/<service-name> 8080:80
 
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Using local images:** a kind cluster can't see images in your local Docker cache. Load them with `kind load docker-image <image>:<tag>`.
+- **Reaching apps from your machine:** kind nodes are containers, so a NodePort isn't automatically open on your host. For quick tests, use `kubectl port-forward`. For permanent access, set `extraPortMappings` in the kind config.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Install tools: kind](https://kubernetes.io/docs/tasks/tools/#kind)
+- [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+- [Use port forwarding to access applications](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

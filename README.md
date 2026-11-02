@@ -158,14 +158,29 @@ The course is complete, and corrections are always welcome:
 - **Found a mistake?** If there's a typo, a broken command or a manifest that fails on a current Kubernetes version, [open an issue](https://github.com/theshubhamgour/kubernetes-tutorial/issues) or send a pull request.
 - **Keep pull requests small.** Stick to one module and mention the Kubernetes version you tested with.
 
-## 💖 Support
+## 📖 Official documentation
 
-If this course helped you, ⭐ **star this repository** so other learners can find it, and share the [playlist](https://www.youtube.com/playlist?list=PLBr8obKbpkYvNosYrgzEayOCe1d_MY5n-) with someone learning Kubernetes.
+Each module links to the official pages for its topic. These are good places to start:
+
+- [Kubernetes documentation](https://kubernetes.io/docs/home/)
+- [Kubernetes basics tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+- [Concepts](https://kubernetes.io/docs/concepts/)
+- [kubectl quick reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+
+## 🙌 Support my work
+
+If this course helped you, ⭐ **star this repository** so other learners can find it, and support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour
 
 ---
 
 <div align="center">
 
-Made by [Shubham Gour](https://github.com/theshubhamgour) · [YouTube](https://www.youtube.com/shubhamgourtech) · [Blog](https://theshubhamgour.hashnode.dev/) · [LinkedIn](https://www.linkedin.com/in/theshubhamgour/)
+Made by [Shubham Gour](https://github.com/theshubhamgour) · [YouTube](https://www.youtube.com/shubhamgourtech) · [Blog](https://theshubhamgour.hashnode.dev/) · [LinkedIn](https://www.linkedin.com/in/theshubhamgour/) · [Instagram](https://www.instagram.com/theshubhamgour/)
 
 </div>

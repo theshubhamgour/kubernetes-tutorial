@@ -843,3 +843,28 @@ kubectl delete pod dns-test
 ## Happy Learning! 🚀
 
 **Shubham Gour Tech**
+
+---
+
+## 📝 Additional notes
+
+- **Storage stays behind by default:** PVCs created from `volumeClaimTemplates` remain after you delete or scale down a StatefulSet. `persistentVolumeClaimRetentionPolicy` changes this behaviour.
+- **Safer upgrades:** `updateStrategy.rollingUpdate.partition` updates only Pods with an ordinal at or above that number, so you can test a new version on some replicas first.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+- [StatefulSet basics (tutorial)](https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/)
+- [Run a replicated stateful application](https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

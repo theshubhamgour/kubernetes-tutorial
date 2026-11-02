@@ -1422,3 +1422,30 @@ Using Gateway API, we can define:
 - clear and portable configuration
 
 This is one of the main reasons Gateway API is becoming the modern standard for Kubernetes networking.
+
+---
+
+## 📝 Additional notes
+
+- **Why this matters now:** the community Ingress NGINX controller used in the first half of this module was [retired on March 24, 2026](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/). The project recommends the Gateway API, and [Ingress2Gateway](https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/) can help convert existing Ingress resources.
+- **The API isn't built into the cluster:** you install the Gateway API CRDs and a controller, such as Envoy Gateway in this demo.
+- **Routing across namespaces:** a route can only reference a backend in another namespace if that namespace allows it with a `ReferenceGrant`.
+- **Debug with status:** when a route doesn't work, check the conditions in `kubectl describe httproute <name>`. They usually explain why.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/)
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

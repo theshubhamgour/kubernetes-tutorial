@@ -347,6 +347,29 @@ minikube delete --profile=vpa-demo
 
 ---
 
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
+---
+
+## 📝 Additional notes
+
+- **VPA is an add-on:** it isn't part of core Kubernetes, so you install its CRDs and components separately.
+- **Availability:** if VPA has to recreate a Pod to apply new values, that Pod restarts. Run enough replicas and use a PodDisruptionBudget for important workloads.
+- **Safe way to start:** recommendation-only mode (`Off`) lets you review suggestions before allowing any changes.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Vertical Pod autoscaling](https://kubernetes.io/docs/concepts/workloads/autoscaling/vertical-pod-autoscale/)
+- [Autoscaling workloads](https://kubernetes.io/docs/concepts/workloads/autoscaling/)
+- [Resource management for Pods and containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+- [Pod disruption budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

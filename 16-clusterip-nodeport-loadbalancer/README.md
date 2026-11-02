@@ -1194,3 +1194,28 @@ or testing environments.
 
 LoadBalancer is useful when external load-balancing integration is
 available and the application needs external access.
+
+---
+
+## 📝 Additional notes
+
+- **Preserving the client IP:** with the default `externalTrafficPolicy: Cluster`, traffic may hop to another node and your app may not see the real client IP. `Local` preserves it, but only nodes running a backend Pod can serve traffic.
+- **LoadBalancer without a cloud:** on bare metal, a `LoadBalancer` Service stays in `<pending>` until something implements it, such as MetalLB. On Minikube, `minikube tunnel` plays this role.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Service types](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)
+- [Create an external load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/)
+- [Source IP with Services](https://kubernetes.io/docs/tutorials/services/source-ip/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

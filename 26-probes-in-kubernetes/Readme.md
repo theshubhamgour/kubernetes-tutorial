@@ -536,3 +536,30 @@ The right probe is chosen based on the question we need Kubernetes to answer:
 - Liveness: "Are you still functioning?"
 
 This is the foundation of safe and reliable application lifecycle management in Kubernetes.
+
+---
+
+## 📝 Additional notes
+
+- **Keep liveness probes simple:** don't check databases or other services in a liveness probe. If a dependency goes down, every Pod restarts, and that can make an outage worse. Dependency checks belong in readiness, if anywhere.
+- **Time before action:** a probe acts after roughly `failureThreshold × periodSeconds`. Use this to work out how long a slow app has to start.
+- **Other probe types:** besides HTTP, probes can use `exec`, `tcpSocket` and `grpc`.
+- **Graceful shutdown:** when a Pod stops, it gets `terminationGracePeriodSeconds` (30 by default) to finish its work before being force-killed.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Liveness, readiness and startup probes](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/)
+- [Configure probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+- [Pod lifecycle: termination](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

@@ -2019,3 +2019,29 @@ Ctrl + C
 ```
 
 > **Services provide stable access to Pods. Ingress provides HTTP/HTTPS routing to those Services. The Ingress Controller implements those routing rules.**
+
+---
+
+## 📝 Additional notes
+
+- **⚠️ Ingress NGINX is retired:** this module's demo uses the community `ingress-nginx` controller. The Kubernetes project [retired it on March 24, 2026](https://kubernetes.io/blog/2026/01/29/ingress-nginx-statement/), so it no longer gets releases or security fixes. It's still fine for learning how Ingress works. For new production clusters, choose a maintained controller or use the Gateway API (module 19).
+- **The Ingress API still works:** the API itself is frozen rather than removed. It gets no new features, and new development happens in the Gateway API.
+- **HTTPS:** add a `tls` section that references a Secret of type `kubernetes.io/tls`. Tools such as cert-manager can create and renew these certificates for you.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- [Ingress controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+- [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

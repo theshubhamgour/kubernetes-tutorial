@@ -249,7 +249,30 @@ Everything inside the Namespace is deleted, including Pods, Deployments, Service
 - Nodes, StorageClasses, and PersistentVolumes are cluster-wide resources.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Stop typing `-n`:** set a default namespace for your current context with `kubectl config set-context --current --namespace=<name>`.
+- **Fair sharing:** a `ResourceQuota` caps total usage in a namespace, and a `LimitRange` sets default and maximum values for each container.
+- **Namespaces aren't a security boundary on their own:** by default, Pods in different namespaces can still talk to each other. Use RBAC (module 30) and NetworkPolicies (module 34) for isolation.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+- [Share a cluster with namespaces](https://kubernetes.io/docs/tasks/administer-cluster/namespaces/)
+- [Resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+- [Limit ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

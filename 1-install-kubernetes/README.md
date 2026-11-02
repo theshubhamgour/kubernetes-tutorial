@@ -35,7 +35,28 @@ This folder contains three different Kubernetes installation approaches. Each su
 - Use `3-kubeadm-installation` when you need a real cluster setup on VMs or cloud instances and want to practice kubeadm workflows.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Switching clusters:** if you try more than one option, each cluster gets its own context. Use `kubectl config get-contexts` to list them and `kubectl config use-context <name>` to switch.
+- **Check versions:** `kubectl version` shows your client and server versions. Kubernetes supports `kubectl` within one minor version of the API server.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Install tools](https://kubernetes.io/docs/tasks/tools/)
+- [Production environment and cluster setup options](https://kubernetes.io/docs/setup/production-environment/)
+- [Organize cluster access with kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

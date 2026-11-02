@@ -702,3 +702,29 @@ This is a core concept in Kubernetes storage management and an essential compone
 StorageClass is not just a storage object; it is a provisioning policy. It allows Kubernetes to handle storage requests in a declarative and automated manner, which is essential in dynamic and production-grade environments.
 
 Understanding StorageClass is critical for managing persistent storage effectively in Kubernetes, especially when working with clusters that need to support a wide variety of workloads and storage backends.
+
+---
+
+## 📝 Additional notes
+
+- **Default StorageClass:** a PVC with no `storageClassName` uses the class annotated `storageclass.kubernetes.io/is-default-class: "true"`. It's the one marked `(default)` in `kubectl get storageclass`.
+- **Turning off dynamic provisioning:** set `storageClassName: ""` on a PVC when it must bind to an existing PV.
+- **CSI drivers:** in real clusters, a CSI driver for your storage system does the provisioning. The `provisioner` field names that driver.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/)
+- [Dynamic volume provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)
+- [Change the default StorageClass](https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

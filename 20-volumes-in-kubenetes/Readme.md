@@ -1261,3 +1261,29 @@ StorageClass
 ```
 
 That is where the dedicated persistent-storage lesson begins.
+
+---
+
+## 📝 Additional notes
+
+- **Limit `emptyDir` size:** set `emptyDir.sizeLimit` so one Pod can't fill the node's disk. If it's exceeded, the Pod is evicted. Memory-backed volumes count towards the container's memory usage.
+- **Mount read-only when you can:** `readOnly: true` on a `volumeMount` protects data from accidental writes.
+- **Mounting one path:** `subPath` mounts a single file or folder from a volume. Files mounted this way don't receive ConfigMap or Secret updates.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+- [Ephemeral volumes](https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/)
+- [Configure a Pod to use a volume for storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

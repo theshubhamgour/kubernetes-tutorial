@@ -211,7 +211,29 @@ Deployments are one of the most important Kubernetes resources for running appli
 ## Happy Learning! 
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **The selector is locked:** in `apps/v1`, a Deployment's `spec.selector` can't be changed after creation, and it must match the Pod template's labels.
+- **Wait for a rollout:** `kubectl rollout status deployment/<name>` waits until the rollout finishes, which makes it useful in CI/CD pipelines.
+- **Using an autoscaler?** Leave `spec.replicas` out of your manifest if an HPA manages it (module 28). Otherwise, every `kubectl apply` resets the replica count.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+- [Run a stateless application](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/)
+- [Workload management](https://kubernetes.io/docs/concepts/workloads/controllers/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

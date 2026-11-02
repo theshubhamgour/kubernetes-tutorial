@@ -1431,3 +1431,29 @@ The most important thing to remember is:
 > **Containers in the same Pod communicate through their shared network namespace, Pods communicate through the cluster Pod network, Services provide stable access to changing Pods, and DNS lets applications find those Services by name.**
 
 Once these concepts are clear, Kubernetes networking becomes much less mysterious.
+
+---
+
+## 📝 Additional notes
+
+- **Pod DNS settings:** look at `/etc/resolv.conf` inside a Pod. The `search` domains are why a short name like `backend` resolves, and `dnsPolicy` on the Pod controls this file.
+- **Debugging DNS:** if names don't resolve, check that the CoreDNS Pods are healthy with `kubectl get pods -n kube-system -l k8s-app=kube-dns`.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Cluster networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+- [Network plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
+- [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+- [Debugging DNS resolution](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

@@ -150,3 +150,30 @@ If a container was terminated, inspect the Pod's container status and last termi
 - Requests and limits affect scheduling and resource management, but do not guarantee application performance.
 
 Resource requests and limits help Kubernetes make informed placement decisions and keep workloads from consuming resources without bounds. They work best when chosen from measured application behavior and reviewed as that behavior changes.
+
+---
+
+## 📝 Additional notes
+
+- **A limit can set your request:** if you set a limit without a request, Kubernetes uses the limit as the request too.
+- **Namespace-wide caps:** a `ResourceQuota` limits the total resources a namespace can use. Once it covers CPU or memory, new Pods must specify those values.
+- **Resizing without a restart:** since v1.35, in-place Pod resize is stable, so you can change CPU and memory on a running Pod through its `resize` subresource.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Resource management for Pods and containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+- [Pod quality of service classes](https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/)
+- [Resize CPU and memory resources](https://kubernetes.io/docs/tasks/configure-pod-container/resize-container-resources/)
+- [Resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

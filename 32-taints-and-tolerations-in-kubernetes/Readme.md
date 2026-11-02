@@ -208,3 +208,28 @@ To remove the Minikube profile and its cluster:
 ```bash
 minikube delete -p taints-demo
 ```
+
+---
+
+## 📝 Additional notes
+
+- **A toleration allows, it doesn't attract:** tolerating a taint lets a Pod run on that node but doesn't send it there. To dedicate nodes, combine a taint with node affinity (module 33).
+- **Taints Kubernetes adds itself:** nodes with problems get taints such as `node.kubernetes.io/not-ready`. By default, Pods tolerate these for 300 seconds before being evicted, which is why recovery from a node failure can take a few minutes.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
+- [Assigning Pods to nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+- [Kubernetes scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

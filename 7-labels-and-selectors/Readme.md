@@ -75,7 +75,29 @@ Happy Learning!
 YouTube: Shubham Gour Tech
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Set-based selectors:** `kubectl get pods -l 'env in (dev,staging)'` matches several values. In YAML, the same idea uses `matchExpressions`.
+- **Recommended label names:** Kubernetes suggests a shared set such as `app.kubernetes.io/name` and `app.kubernetes.io/version`, which tools can understand.
+- **Labels vs annotations:** labels are for selecting objects. Annotations hold extra information that selectors can't query, such as a build ID.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Labels and selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+- [Recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+- [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

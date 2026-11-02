@@ -264,3 +264,28 @@ minikube delete -p affinity-demo
 Node Affinity is a powerful scheduling concept for Kubernetes clusters with heterogeneous node capabilities. It lets you define strong placement constraints, express preferences, and avoid specific node classes when needed. Combined with labels and node selection rules, it gives you more control over how workloads are placed in production environments.
 
 This hands-on example demonstrates the core idea clearly: label the nodes, define matching rules, and let Kubernetes schedule workloads based on those conditions.
+
+---
+
+## 📝 Additional notes
+
+- **AND vs OR:** multiple `nodeSelectorTerms` are ORed (any can match), while multiple `matchExpressions` in one term are ANDed (all must match).
+- **Spreading Pods:** for placing Pods relative to other Pods, look at `podAntiAffinity` and `topologySpreadConstraints`. These help keep replicas on separate nodes or zones.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Assigning Pods to nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+- [Assign Pods to nodes using node affinity](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/)
+- [Pod topology spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

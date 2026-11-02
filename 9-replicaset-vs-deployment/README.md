@@ -297,7 +297,29 @@ Happy Learning!
 **Shubham Gour Tech**
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Why old ReplicaSets stay around:** a Deployment keeps old ReplicaSets scaled to 0 so it can roll back. `spec.revisionHistoryLimit` controls how many it keeps (the default is 10).
+- **Who owns what:** run `kubectl get pod <pod> -o yaml` and look at `metadata.ownerReferences` to see which controller owns a Pod.
+- **Don't edit a Deployment's ReplicaSet directly:** the Deployment controller manages it and will undo your changes.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
+- [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+- [Owners and dependents](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

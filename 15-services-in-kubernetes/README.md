@@ -1296,3 +1296,31 @@ DNS
  ↓
 Lets applications find the Service
 ```
+
+---
+
+## 📝 Additional notes
+
+- **Named ports:** set `targetPort: http` and name the container port `http`. You can then change the container's port number without editing the Service.
+- **Sticky connections:** `sessionAffinity: ClientIP` sends a client back to the same Pod each time.
+- **Services for external systems:** a Service with no selector can point at endpoints you manage yourself, and `type: ExternalName` gives a DNS alias for an external hostname.
+- **Readiness matters:** Pods failing their readiness probe are removed from a Service's backends (module 26).
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
+- [EndpointSlices](https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/)
+- [Connecting applications with Services](https://kubernetes.io/docs/tutorials/services/connect-applications-service/)
+- [Debug Services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

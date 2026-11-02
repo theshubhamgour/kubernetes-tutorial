@@ -334,6 +334,28 @@ This is one of the most important automation features in Kubernetes.
 
 ---
 
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
+---
+
+## 📝 Additional notes
+
+- **Scaling on several metrics:** an HPA in `autoscaling/v2` can use multiple metrics and picks whichever asks for the most replicas.
+- **Don't fight the HPA:** when an HPA manages a Deployment, remove `spec.replicas` from the manifest. Otherwise, each `kubectl apply` resets the replica count.
+- **Seeing `<unknown>`:** if `kubectl get hpa` shows `<unknown>` for targets, check that metrics-server is running and the containers set CPU requests.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Horizontal Pod autoscaling](https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/)
+- [HorizontalPodAutoscaler walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
+- [Resource metrics pipeline](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

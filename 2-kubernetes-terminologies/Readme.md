@@ -96,7 +96,28 @@ A `ClusterIP` is the internal IP address assigned to a Service. It provides a st
 This file defines the building blocks of Kubernetes operations: cluster components, workloads, networking, configuration, and security. Understanding these terms will make it easier to follow installation guides, manage resources with `kubectl`, and design Kubernetes-native applications.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Explore from your terminal:** `kubectl api-resources` lists every resource type in your cluster, and `kubectl explain <resource>` describes its fields.
+- **Look up a term:** the official glossary below has short definitions, and you can filter it to core Kubernetes terms.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Kubernetes glossary](https://kubernetes.io/docs/reference/glossary/)
+- [Cluster architecture](https://kubernetes.io/docs/concepts/architecture/)
+- [Kubernetes components](https://kubernetes.io/docs/concepts/overview/components/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

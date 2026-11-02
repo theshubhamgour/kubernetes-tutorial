@@ -365,3 +365,29 @@ Only delete the namespace or profile if they are dedicated to this demo; these c
 - `get` reads one named object, `list` reads a collection, and `watch` streams changes.
 - These verbs do not grant permission to create, update, patch, or delete Pods.
 - Use `kubectl auth can-i` to verify expected authorization, and consider all bindings that may grant the identity additional permissions.
+
+---
+
+## 📝 Additional notes
+
+- **Reuse with a RoleBinding:** binding a ClusterRole with a RoleBinding grants its permissions only in that namespace. This lets you define a role once and reuse it.
+- **Built-in roles:** Kubernetes ships with `view`, `edit`, `admin` and `cluster-admin`, so check these before writing your own.
+- **Watch for risky permissions:** `escalate`, `bind`, `impersonate` and wildcard (`*`) rules can effectively grant far more access than they appear to.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Using RBAC authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+- [RBAC good practices](https://kubernetes.io/docs/concepts/security/rbac-good-practices/)
+- [Authorization overview](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

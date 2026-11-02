@@ -582,3 +582,31 @@ kubectl delete secret db-credentials
 - Secrets are limited to 1 MiB and are not general-purpose file storage
 
 Kubernetes Secrets separate credentials from application code, but they should always be used together with sound access control and secret-management practices.
+
+---
+
+## 📝 Additional notes
+
+- **Encryption at rest:** Secrets aren't necessarily encrypted in etcd. On clusters you run yourself, you can turn this on with an `EncryptionConfiguration`.
+- **Reading isn't the only risk:** anyone who can create a Pod in a namespace can mount that namespace's Secrets and read them, even without direct `get` access to Secrets.
+- **Files over environment variables:** mounted files are generally safer, because environment variables can leak into logs and crash reports.
+- **External secret managers:** tools such as the External Secrets Operator or the Secrets Store CSI Driver can fetch values from a dedicated secrets manager.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+- [Good practices for Secrets](https://kubernetes.io/docs/concepts/security/secrets-good-practices/)
+- [Encrypting Secret data at rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+- [Distribute credentials securely](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

@@ -143,7 +143,29 @@ minikube dashboard
 ```
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Using local images:** load an image into the cluster with `minikube image load <image>:<tag>`.
+- **Add-ons:** `minikube addons list` shows optional features such as `ingress` and `metrics-server`. Later modules rely on some of these.
+- **Multiple clusters:** use profiles to keep demos separate, for example `minikube start -p demo`. Delete one with `minikube delete -p demo`.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Install tools: minikube](https://kubernetes.io/docs/tasks/tools/#minikube)
+- [Hello Minikube tutorial](https://kubernetes.io/docs/tutorials/hello-minikube/)
+- [Use port forwarding to access applications](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

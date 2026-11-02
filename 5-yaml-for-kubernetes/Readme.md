@@ -590,7 +590,30 @@ YouTube: Shubham Gour Tech
 Happy Learning 🚀
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Quote values that look like other types:** environment variable values must be strings, so write `"8080"` and `"true"`. Without quotes, YAML reads them as a number and a boolean, and the API server rejects them.
+- **Validate before applying:** `kubectl apply -f file.yml --dry-run=server` asks the API server to validate the manifest without creating anything.
+- **Find a field:** `kubectl explain deployment.spec.strategy` documents any field, right from your terminal.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Objects in Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/)
+- [Kubernetes object management](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/)
+- [Configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/)
+- [API reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

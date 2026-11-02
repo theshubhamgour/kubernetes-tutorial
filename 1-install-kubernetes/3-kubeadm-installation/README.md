@@ -209,7 +209,29 @@ Shows all pods
 ---
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Lost or expired join command:** join tokens expire after 24 hours by default. Generate a fresh command on the control plane with `kubeadm token create --print-join-command`.
+- **Nodes stuck in `NotReady`:** this usually means no CNI network plugin is running yet. Check with `kubectl get pods -n kube-system` and `kubectl describe node <node>`.
+- **Upgrades:** don't skip minor versions when you upgrade. Follow the official kubeadm upgrade steps one minor version at a time.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+- [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+- [Upgrading kubeadm clusters](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

@@ -376,3 +376,29 @@ A PersistentVolume is a Kubernetes storage resource whose lifecycle is independe
 - PersistentVolumeClaim in detail
 - StorageClass and dynamic provisioning
 - binding behavior and access modes
+
+---
+
+## 📝 Additional notes
+
+- **Scope:** a PV is a cluster-wide resource with no namespace, while a PVC belongs to a namespace.
+- **Access modes:** `ReadWriteOnce` allows mounting by one node, `ReadWriteMany` by many nodes (if the storage supports it), and `ReadWriteOncePod` by a single Pod.
+- **Reusing a `Released` PV:** with `Retain`, a PV stays `Released` after its PVC is deleted and won't bind again by itself. After you check or clean the data, an admin must remove its `spec.claimRef`.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+- [Access modes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes)
+- [Deploying WordPress and MySQL with persistent volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

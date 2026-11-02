@@ -1090,3 +1090,30 @@ is allowed to communicate?
 
 Once this mental model is clear, the detailed Kubernetes networking
 concepts become much easier to learn.
+
+---
+
+## 📝 Additional notes
+
+- **The core rule:** every Pod gets its own cluster-wide IP, and Pods can reach each other across nodes without NAT. The CNI plugin provides this.
+- **How a Service IP works:** on each node, `kube-proxy` (or a CNI replacement for it) programs rules that forward Service traffic to the backend Pods.
+- **Quick local test:** `kubectl port-forward svc/<service> 8080:80` reaches a Service from your machine without exposing it. It's for debugging, not production.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Cluster networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+- [Services, load balancing and networking](https://kubernetes.io/docs/concepts/services-networking/)
+- [DNS for Services and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+- [Debug Services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

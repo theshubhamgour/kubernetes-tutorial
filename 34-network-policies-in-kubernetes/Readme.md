@@ -540,3 +540,29 @@ The second command deletes the Minikube profile itself, so use it only if you no
 ---
 
 **Video companion:** This README is intended as a practical companion to the tutorial. Follow the sections in order and run each connectivity test before and after applying the corresponding policy to observe the difference.
+
+---
+
+## 📝 Additional notes
+
+- **Remember DNS:** once you restrict egress, Pods can't resolve names unless you also allow DNS (UDP and TCP port 53) to CoreDNS. This is a very common cause of "the network broke".
+- **A subtle YAML difference:** `namespaceSelector` and `podSelector` in the same `from` item must both match (AND). As two separate items starting with `-`, either can match (OR).
+- **Allow-only rules:** the standard NetworkPolicy API has no explicit deny rule. Traffic is blocked by selecting a Pod and not allowing that traffic.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Network policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+- [Declare a network policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/)
+- [Network plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

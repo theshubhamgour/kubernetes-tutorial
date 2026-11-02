@@ -358,3 +358,28 @@ It gives Kubernetes a clean abstraction:
 - Kubernetes finds matching PV
 - Pod mounts the PVC
 - data persists beyond the Pod lifecycle
+
+---
+
+## 📝 Additional notes
+
+- **Growing a volume:** you can increase `resources.requests.storage` on a PVC if its StorageClass has `allowVolumeExpansion: true`. Shrinking isn't supported.
+- **Same namespace only:** a Pod can only use a PVC in its own namespace.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [PersistentVolumeClaims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+- [Expanding persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#expanding-persistent-volumes-claims)
+- [Deploying WordPress and MySQL with persistent volumes](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

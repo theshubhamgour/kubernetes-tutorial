@@ -444,7 +444,30 @@ After mastering kubectl, continue with:
 ⭐ If this repository helped you, consider giving it a star and sharing it with others learning Kubernetes.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Crashed container logs:** `kubectl logs <pod> --previous` shows logs from the last crashed container. This is often the only place the error appears when a Pod is in `CrashLoopBackOff`.
+- **Generate YAML instead of writing it:** `kubectl create deployment web --image=nginx --dry-run=client -o yaml` prints a starter manifest and creates nothing.
+- **Preview a change:** `kubectl diff -f file.yml` shows what `apply` would change.
+- **Debug minimal images:** if an image has no shell, `kubectl debug -it <pod> --image=busybox --target=<container>` attaches a temporary debug container.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [kubectl overview](https://kubernetes.io/docs/reference/kubectl/)
+- [kubectl quick reference](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+- [Debug running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

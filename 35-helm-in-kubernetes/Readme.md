@@ -572,3 +572,30 @@ The big win is this:
 That is the heart of Helm.
 
 If you follow along on Minikube and build the chart step by step, the concepts become much easier to understand and remember.
+
+---
+
+## 📝 Additional notes
+
+- **Where Helm keeps history:** by default, Helm stores release information as Secrets in the release's namespace. That's what makes `helm rollback` possible.
+- **CRDs in charts:** files in a chart's `crds/` folder are installed once and aren't upgraded or deleted by Helm, so plan CRD changes separately.
+- **Secrets in values:** don't commit real passwords in `values.yaml`. Pass them at install time or use a secrets tool.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Managing workloads (includes Helm)](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
+- [Custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
+- [Secrets good practices](https://kubernetes.io/docs/concepts/security/secrets-good-practices/)
+- [Helm documentation (Helm's official site)](https://helm.sh/docs/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

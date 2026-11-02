@@ -686,7 +686,30 @@ To maintain Pod networking and namespace.
 Understanding Pods is essential because nearly every Kubernetes workload—whether a Deployment, StatefulSet, DaemonSet, or Job—ultimately runs applications inside Pods.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Native sidecars:** Kubernetes has a built-in sidecar pattern, stable since v1.33. Declare the sidecar under `initContainers` with `restartPolicy: Always`. It starts before the main container and keeps running alongside it.
+- **Init containers:** these run to completion before the app containers start, which makes them useful for setup work such as waiting for a dependency.
+- **Pods are mostly immutable:** most fields can't be edited after creation. In real workloads, change the Deployment and let it replace the Pods.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
+- [Pod lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
+- [Sidecar containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
+- [Init containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour

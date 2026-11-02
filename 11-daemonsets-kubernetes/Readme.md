@@ -388,7 +388,28 @@ kubectl get pod <pod-name> -o jsonpath='{.spec.containers[0].image}'
 > Use Deployments for your applications. Use DaemonSets for node-level infrastructure — logging, monitoring, networking, and security.
 ---
 ---
-## Connect with Shubham Gour
-- YouTube: https://youtube.com/shubhamgourtech
-- LinkedIn: https://www.linkedin.com/in/theshubhamgour/
-- Hashtags: #theshubhamgour #shubhamgour
+
+---
+
+## 📝 Additional notes
+
+- **Controlling updates:** the default `updateStrategy` is `RollingUpdate`. Use `OnDelete` when you want a Pod replaced only after you delete it yourself, for example while draining nodes one at a time.
+- **Draining nodes:** `kubectl drain` won't proceed past DaemonSet Pods unless you add `--ignore-daemonsets`.
+
+## 📖 Official documentation
+
+Learn more from the official Kubernetes docs:
+
+- [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
+- [Perform a rolling update on a DaemonSet](https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/)
+- [Safely drain a node](https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/)
+
+## 🙌 Support my work
+
+If this helped you learn Kubernetes, please support the channel:
+
+- 📺 **[Subscribe on YouTube](https://www.youtube.com/shubhamgourtech?sub_confirmation=1)** for more free DevOps and cloud courses
+- 💼 **[Connect on LinkedIn](https://www.linkedin.com/in/theshubhamgour/)**
+- 📸 **[Follow on Instagram](https://www.instagram.com/theshubhamgour/)**
+
+#theshubhamgour #shubhamgour
