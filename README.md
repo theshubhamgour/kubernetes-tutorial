@@ -147,7 +147,7 @@ cd kubernetes-tutorial
 | # | Module | Video |
 | :-: | :-- | :-- |
 | 35 | [Helm: create your first chart](./35-helm-in-kubernetes) | [▶ 35:54](https://www.youtube.com/watch?v=_54bTTQ5VyE&list=PLBr8obKbpkYvNosYrgzEayOCe1d_MY5n-) |
-| 36 | [Custom Resource Definitions (CRDs)](./36-crd-in-kubernetes) | Notes and YAML |
+| 36 | [Custom Resource Definitions (CRDs)](./36-crd-in-kubernetes) | [▶ Watch](https://www.youtube.com/watch?v=XLOXLDGV454&list=PLBr8obKbpkYvNosYrgzEayOCe1d_MY5n-) |
 
 ---
 
