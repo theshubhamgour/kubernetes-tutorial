@@ -46,17 +46,7 @@ Many Kubernetes tutorials show you commands. This one shows you **why** they wor
 
 ## 🗺️ Your learning path
 
-```mermaid
-flowchart LR
-    A["🧱 Setup & basics"] --> B["🏷️ Organize"]
-    B --> C["⚙️ Workloads"]
-    C --> D["🌐 Networking"]
-    D --> E["💾 Storage"]
-    E --> F["🔧 Config & reliability"]
-    F --> G["📈 Autoscaling"]
-    G --> H["🔐 Security & scheduling"]
-    H --> I["🚀 Helm & CRDs"]
-```
+**🧱 Setup and basics → 🏷️ Organizing → ⚙️ Workloads → 🌐 Networking → 💾 Storage → 🔧 Configuration and reliability → 📈 Autoscaling → 🔐 Security and scheduling → 🚀 Helm and CRDs**
 
 By the end, you'll be able to:
 
